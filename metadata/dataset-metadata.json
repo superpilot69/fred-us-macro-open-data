@@ -1,18 +1,20 @@
 {
-  "generatedAt": "2026-04-24T16:58:35.614Z",
+  "generatedAt": "2026-04-25T03:54:14.015Z",
   "upstreamGeneratedAt": "2026-04-24T16:29:43.477Z",
-  "upstreamEventGeneratedAt": "2026-04-24T16:29:43.477Z",
+  "upstreamEventGeneratedAt": "2026-04-25T03:54:14.015Z",
   "repoPurpose": "Core high-impact U.S. macro history and replay-ready market event data sourced from FRED.",
   "scope": {
     "selection": "P1 market-moving macro indicators only",
     "policy": "The older broad 2019-start event slice has been replaced with full available history for the selected core series.",
-    "forecastData": "Consensus forecast / expected values are not included because FRED does not provide forecast fields for these series."
+    "forecastData": "Consensus actual / forecast / previous values are enriched from Investing.com Economic Calendar occurrences where matching history exists. FRED remains the observation and release-date source of record.",
+    "forecastCoverage": "Forecast coverage is partial and varies by series/year; missing forecasts are stored as null, not zero."
   },
   "files": {
     "history": "data/fred-us-macro-history.json",
     "events": "data/fred-us-macro-events.json",
     "catalog": "metadata/series-catalog.json",
-    "knownRestrictedSeries": "metadata/excluded-series.json"
+    "knownRestrictedSeries": "metadata/excluded-series.json",
+    "consensusRaw": "data/investing-us-macro-consensus.json"
   },
   "stats": {
     "seriesCount": 15,
@@ -30,7 +32,17 @@
       "macro_inflation": 5,
       "macro_labor": 6,
       "macro_growth": 3
-    }
+    },
+    "consensusActualEvents": 4682,
+    "consensusEnrichedEvents": 4682,
+    "consensusForecastEvents": 2728,
+    "consensusPreviousEvents": 4682,
+    "consensusSeriesCount": 14,
+    "forecastSeriesCount": 14,
+    "consensusSourceId": "investing-economic-calendar",
+    "consensusSourceLabel": "Investing.com Economic Calendar",
+    "consensusGeneratedAt": "2026-04-25T03:54:14.015Z",
+    "investingOccurrenceCount": 6834
   },
   "series": [
     {
@@ -39,7 +51,12 @@
       "eventValueKind": "level",
       "eventCount": 32,
       "firstEvent": "2008-12-16T19:00:00.000Z",
-      "lastEvent": "2025-12-11T19:00:00.000Z"
+      "lastEvent": "2025-12-11T19:00:00.000Z",
+      "consensusEventId": 168,
+      "consensusEvents": 32,
+      "forecastEvents": 30,
+      "firstForecastObservation": "2008-12-16",
+      "lastForecastObservation": "2025-12-11"
     },
     {
       "id": "CPIAUCNS",
@@ -47,7 +64,12 @@
       "eventValueKind": "yoy_pct",
       "eventCount": 1346,
       "firstEvent": "1914-01-01T13:30:00.000Z",
-      "lastEvent": "2026-04-10T12:30:00.000Z"
+      "lastEvent": "2026-04-10T12:30:00.000Z",
+      "consensusEventId": 733,
+      "consensusEvents": 258,
+      "forecastEvents": 167,
+      "firstForecastObservation": "2012-04-01",
+      "lastForecastObservation": "2026-03-01"
     },
     {
       "id": "CPILFENS",
@@ -55,7 +77,12 @@
       "eventValueKind": "yoy_pct",
       "eventCount": 818,
       "firstEvent": "1958-01-01T13:30:00.000Z",
-      "lastEvent": "2026-04-10T12:30:00.000Z"
+      "lastEvent": "2026-04-10T12:30:00.000Z",
+      "consensusEventId": 736,
+      "consensusEvents": 578,
+      "forecastEvents": 167,
+      "firstForecastObservation": "2012-04-01",
+      "lastForecastObservation": "2026-03-01"
     },
     {
       "id": "PPIACO",
@@ -63,7 +90,12 @@
       "eventValueKind": "yoy_pct",
       "eventCount": 1347,
       "firstEvent": "1914-01-01T13:30:00.000Z",
-      "lastEvent": "2026-04-14T12:30:00.000Z"
+      "lastEvent": "2026-04-14T12:30:00.000Z",
+      "consensusEventId": 734,
+      "consensusEvents": 168,
+      "forecastEvents": 168,
+      "firstForecastObservation": "2012-04-01",
+      "lastForecastObservation": "2026-03-01"
     },
     {
       "id": "PCEPI",
@@ -71,7 +103,12 @@
       "eventValueKind": "yoy_pct",
       "eventCount": 794,
       "firstEvent": "1960-01-01T13:30:00.000Z",
-      "lastEvent": "2026-04-09T12:30:00.000Z"
+      "lastEvent": "2026-04-09T12:30:00.000Z",
+      "consensusEventId": 906,
+      "consensusEvents": 80,
+      "forecastEvents": 39,
+      "firstForecastObservation": "2019-10-01",
+      "lastForecastObservation": "2026-02-01"
     },
     {
       "id": "PCEPILFE",
@@ -79,7 +116,12 @@
       "eventValueKind": "yoy_pct",
       "eventCount": 794,
       "firstEvent": "1960-01-01T13:30:00.000Z",
-      "lastEvent": "2026-04-09T12:30:00.000Z"
+      "lastEvent": "2026-04-09T12:30:00.000Z",
+      "consensusEventId": 905,
+      "consensusEvents": 580,
+      "forecastEvents": 129,
+      "firstForecastObservation": "2014-10-01",
+      "lastForecastObservation": "2026-02-01"
     },
     {
       "id": "UNRATE",
@@ -87,7 +129,12 @@
       "eventValueKind": "level",
       "eventCount": 938,
       "firstEvent": "1948-01-01T13:30:00.000Z",
-      "lastEvent": "2026-04-03T12:30:00.000Z"
+      "lastEvent": "2026-04-03T12:30:00.000Z",
+      "consensusEventId": 300,
+      "consensusEvents": 307,
+      "forecastEvents": 212,
+      "firstForecastObservation": "2008-07-01",
+      "lastForecastObservation": "2026-03-01"
     },
     {
       "id": "PAYEMS",
@@ -95,7 +142,12 @@
       "eventValueKind": "period_change",
       "eventCount": 1046,
       "firstEvent": "1939-02-01T13:30:00.000Z",
-      "lastEvent": "2026-04-03T12:30:00.000Z"
+      "lastEvent": "2026-04-03T12:30:00.000Z",
+      "consensusEventId": 227,
+      "consensusEvents": 627,
+      "forecastEvents": 218,
+      "firstForecastObservation": "2008-02-01",
+      "lastForecastObservation": "2026-03-01"
     },
     {
       "id": "ADPMNUSNERSA",
@@ -103,7 +155,12 @@
       "eventValueKind": "period_change",
       "eventCount": 194,
       "firstEvent": "2010-02-01T13:15:00.000Z",
-      "lastEvent": "2026-04-01T12:15:00.000Z"
+      "lastEvent": "2026-04-01T12:15:00.000Z",
+      "consensusEventId": 1,
+      "consensusEvents": 98,
+      "forecastEvents": 98,
+      "firstForecastObservation": "2010-04-01",
+      "lastForecastObservation": "2026-03-01"
     },
     {
       "id": "CES0500000003",
@@ -111,7 +168,12 @@
       "eventValueKind": "period_pct_change",
       "eventCount": 240,
       "firstEvent": "2006-04-01T13:30:00.000Z",
-      "lastEvent": "2026-04-03T12:30:00.000Z"
+      "lastEvent": "2026-04-03T12:30:00.000Z",
+      "consensusEventId": 8,
+      "consensusEvents": 209,
+      "forecastEvents": 186,
+      "firstForecastObservation": "2008-05-01",
+      "lastForecastObservation": "2026-03-01"
     },
     {
       "id": "ICSA",
@@ -119,7 +181,12 @@
       "eventValueKind": "level",
       "eventCount": 3094,
       "firstEvent": "1967-01-07T13:30:00.000Z",
-      "lastEvent": "2026-04-23T12:30:00.000Z"
+      "lastEvent": "2026-04-23T12:30:00.000Z",
+      "consensusEventId": 294,
+      "consensusEvents": 1077,
+      "forecastEvents": 874,
+      "firstForecastObservation": "2009-05-30",
+      "lastForecastObservation": "2026-04-18"
     },
     {
       "id": "JTSJOL",
@@ -127,7 +194,12 @@
       "eventValueKind": "level",
       "eventCount": 303,
       "firstEvent": "2000-12-01T15:00:00.000Z",
-      "lastEvent": "2026-03-31T14:00:00.000Z"
+      "lastEvent": "2026-03-31T14:00:00.000Z",
+      "consensusEventId": 1057,
+      "consensusEvents": 267,
+      "forecastEvents": 150,
+      "firstForecastObservation": "2013-06-01",
+      "lastForecastObservation": "2026-02-01"
     },
     {
       "id": "GDP",
@@ -135,7 +207,12 @@
       "eventValueKind": "annualized_period_pct_change",
       "eventCount": 315,
       "firstEvent": "1947-04-01T13:30:00.000Z",
-      "lastEvent": "2026-02-20T13:30:00.000Z"
+      "lastEvent": "2026-02-20T13:30:00.000Z",
+      "consensusEventId": null,
+      "consensusEvents": 0,
+      "forecastEvents": 0,
+      "firstForecastObservation": null,
+      "lastForecastObservation": null
     },
     {
       "id": "GDPC1",
@@ -143,7 +220,12 @@
       "eventValueKind": "annualized_period_pct_change",
       "eventCount": 315,
       "firstEvent": "1947-04-01T13:30:00.000Z",
-      "lastEvent": "2026-02-20T13:30:00.000Z"
+      "lastEvent": "2026-02-20T13:30:00.000Z",
+      "consensusEventId": 375,
+      "consensusEvents": 72,
+      "forecastEvents": 72,
+      "firstForecastObservation": "2008-01-01",
+      "lastForecastObservation": "2025-10-01"
     },
     {
       "id": "RSAFS",
@@ -151,7 +233,12 @@
       "eventValueKind": "period_pct_change",
       "eventCount": 410,
       "firstEvent": "1992-02-01T13:30:00.000Z",
-      "lastEvent": "2026-04-21T12:30:00.000Z"
+      "lastEvent": "2026-04-21T12:30:00.000Z",
+      "consensusEventId": 256,
+      "consensusEvents": 329,
+      "forecastEvents": 218,
+      "firstForecastObservation": "2008-01-01",
+      "lastForecastObservation": "2026-03-01"
     }
   ]
 }

@@ -18,7 +18,15 @@
     "approximateReleaseDateEvents": 32,
     "firstEvent": "2008-12-16T19:00:00.000Z",
     "lastEvent": "2025-12-11T19:00:00.000Z",
-    "sourceUrl": "https://fred.stlouisfed.org/series/DFEDTARU"
+    "sourceUrl": "https://fred.stlouisfed.org/series/DFEDTARU",
+    "consensusSourceId": "investing-economic-calendar",
+    "consensusSourceLabel": "Investing.com Economic Calendar",
+    "consensusEventId": 168,
+    "consensusEventLabel": "Fed Interest Rate Decision",
+    "consensusMatchedEvents": 32,
+    "consensusForecastEvents": 30,
+    "consensusFirstForecastObservation": "2008-12-16",
+    "consensusLastForecastObservation": "2025-12-11"
   },
   {
     "id": "CPIAUCNS",
@@ -39,7 +47,15 @@
     "approximateReleaseDateEvents": 422,
     "firstEvent": "1914-01-01T13:30:00.000Z",
     "lastEvent": "2026-04-10T12:30:00.000Z",
-    "sourceUrl": "https://fred.stlouisfed.org/series/CPIAUCNS"
+    "sourceUrl": "https://fred.stlouisfed.org/series/CPIAUCNS",
+    "consensusSourceId": "investing-economic-calendar",
+    "consensusSourceLabel": "Investing.com Economic Calendar",
+    "consensusEventId": 733,
+    "consensusEventLabel": "US CPI YoY",
+    "consensusMatchedEvents": 258,
+    "consensusForecastEvents": 167,
+    "consensusFirstForecastObservation": "2012-04-01",
+    "consensusLastForecastObservation": "2026-03-01"
   },
   {
     "id": "CPILFENS",
@@ -60,7 +76,15 @@
     "approximateReleaseDateEvents": 467,
     "firstEvent": "1958-01-01T13:30:00.000Z",
     "lastEvent": "2026-04-10T12:30:00.000Z",
-    "sourceUrl": "https://fred.stlouisfed.org/series/CPILFENS"
+    "sourceUrl": "https://fred.stlouisfed.org/series/CPILFENS",
+    "consensusSourceId": "investing-economic-calendar",
+    "consensusSourceLabel": "Investing.com Economic Calendar",
+    "consensusEventId": 736,
+    "consensusEventLabel": "US Core CPI YoY",
+    "consensusMatchedEvents": 578,
+    "consensusForecastEvents": 167,
+    "consensusFirstForecastObservation": "2012-04-01",
+    "consensusLastForecastObservation": "2026-03-01"
   },
   {
     "id": "PPIACO",
@@ -81,7 +105,15 @@
     "approximateReleaseDateEvents": 995,
     "firstEvent": "1914-01-01T13:30:00.000Z",
     "lastEvent": "2026-04-14T12:30:00.000Z",
-    "sourceUrl": "https://fred.stlouisfed.org/series/PPIACO"
+    "sourceUrl": "https://fred.stlouisfed.org/series/PPIACO",
+    "consensusSourceId": "investing-economic-calendar",
+    "consensusSourceLabel": "Investing.com Economic Calendar",
+    "consensusEventId": 734,
+    "consensusEventLabel": "US PPI YoY",
+    "consensusMatchedEvents": 168,
+    "consensusForecastEvents": 168,
+    "consensusFirstForecastObservation": "2012-04-01",
+    "consensusLastForecastObservation": "2026-03-01"
   },
   {
     "id": "PCEPI",
@@ -102,7 +134,15 @@
     "approximateReleaseDateEvents": 486,
     "firstEvent": "1960-01-01T13:30:00.000Z",
     "lastEvent": "2026-04-09T12:30:00.000Z",
-    "sourceUrl": "https://fred.stlouisfed.org/series/PCEPI"
+    "sourceUrl": "https://fred.stlouisfed.org/series/PCEPI",
+    "consensusSourceId": "investing-economic-calendar",
+    "consensusSourceLabel": "Investing.com Economic Calendar",
+    "consensusEventId": 906,
+    "consensusEventLabel": "US PCE Price Index YoY",
+    "consensusMatchedEvents": 80,
+    "consensusForecastEvents": 39,
+    "consensusFirstForecastObservation": "2019-10-01",
+    "consensusLastForecastObservation": "2026-02-01"
   },
   {
     "id": "PCEPILFE",
@@ -123,7 +163,15 @@
     "approximateReleaseDateEvents": 486,
     "firstEvent": "1960-01-01T13:30:00.000Z",
     "lastEvent": "2026-04-09T12:30:00.000Z",
-    "sourceUrl": "https://fred.stlouisfed.org/series/PCEPILFE"
+    "sourceUrl": "https://fred.stlouisfed.org/series/PCEPILFE",
+    "consensusSourceId": "investing-economic-calendar",
+    "consensusSourceLabel": "Investing.com Economic Calendar",
+    "consensusEventId": 905,
+    "consensusEventLabel": "US Core PCE Price Index YoY",
+    "consensusMatchedEvents": 580,
+    "consensusForecastEvents": 129,
+    "consensusFirstForecastObservation": "2014-10-01",
+    "consensusLastForecastObservation": "2026-02-01"
   },
   {
     "id": "UNRATE",
@@ -144,7 +192,15 @@
     "approximateReleaseDateEvents": 146,
     "firstEvent": "1948-01-01T13:30:00.000Z",
     "lastEvent": "2026-04-03T12:30:00.000Z",
-    "sourceUrl": "https://fred.stlouisfed.org/series/UNRATE"
+    "sourceUrl": "https://fred.stlouisfed.org/series/UNRATE",
+    "consensusSourceId": "investing-economic-calendar",
+    "consensusSourceLabel": "Investing.com Economic Calendar",
+    "consensusEventId": 300,
+    "consensusEventLabel": "US Unemployment Rate",
+    "consensusMatchedEvents": 307,
+    "consensusForecastEvents": 212,
+    "consensusFirstForecastObservation": "2008-07-01",
+    "consensusLastForecastObservation": "2026-03-01"
   },
   {
     "id": "PAYEMS",
@@ -165,7 +221,15 @@
     "approximateReleaseDateEvents": 195,
     "firstEvent": "1939-02-01T13:30:00.000Z",
     "lastEvent": "2026-04-03T12:30:00.000Z",
-    "sourceUrl": "https://fred.stlouisfed.org/series/PAYEMS"
+    "sourceUrl": "https://fred.stlouisfed.org/series/PAYEMS",
+    "consensusSourceId": "investing-economic-calendar",
+    "consensusSourceLabel": "Investing.com Economic Calendar",
+    "consensusEventId": 227,
+    "consensusEventLabel": "US Nonfarm Payrolls",
+    "consensusMatchedEvents": 627,
+    "consensusForecastEvents": 218,
+    "consensusFirstForecastObservation": "2008-02-01",
+    "consensusLastForecastObservation": "2026-03-01"
   },
   {
     "id": "ADPMNUSNERSA",
@@ -186,7 +250,15 @@
     "approximateReleaseDateEvents": 151,
     "firstEvent": "2010-02-01T13:15:00.000Z",
     "lastEvent": "2026-04-01T12:15:00.000Z",
-    "sourceUrl": "https://fred.stlouisfed.org/series/ADPMNUSNERSA"
+    "sourceUrl": "https://fred.stlouisfed.org/series/ADPMNUSNERSA",
+    "consensusSourceId": "investing-economic-calendar",
+    "consensusSourceLabel": "Investing.com Economic Calendar",
+    "consensusEventId": 1,
+    "consensusEventLabel": "US ADP Employment Change",
+    "consensusMatchedEvents": 98,
+    "consensusForecastEvents": 98,
+    "consensusFirstForecastObservation": "2010-04-01",
+    "consensusLastForecastObservation": "2026-03-01"
   },
   {
     "id": "CES0500000003",
@@ -207,7 +279,15 @@
     "approximateReleaseDateEvents": 59,
     "firstEvent": "2006-04-01T13:30:00.000Z",
     "lastEvent": "2026-04-03T12:30:00.000Z",
-    "sourceUrl": "https://fred.stlouisfed.org/series/CES0500000003"
+    "sourceUrl": "https://fred.stlouisfed.org/series/CES0500000003",
+    "consensusSourceId": "investing-economic-calendar",
+    "consensusSourceLabel": "Investing.com Economic Calendar",
+    "consensusEventId": 8,
+    "consensusEventLabel": "US Average Hourly Earnings MoM",
+    "consensusMatchedEvents": 209,
+    "consensusForecastEvents": 186,
+    "consensusFirstForecastObservation": "2008-05-01",
+    "consensusLastForecastObservation": "2026-03-01"
   },
   {
     "id": "ICSA",
@@ -228,7 +308,15 @@
     "approximateReleaseDateEvents": 2212,
     "firstEvent": "1967-01-07T13:30:00.000Z",
     "lastEvent": "2026-04-23T12:30:00.000Z",
-    "sourceUrl": "https://fred.stlouisfed.org/series/ICSA"
+    "sourceUrl": "https://fred.stlouisfed.org/series/ICSA",
+    "consensusSourceId": "investing-economic-calendar",
+    "consensusSourceLabel": "Investing.com Economic Calendar",
+    "consensusEventId": 294,
+    "consensusEventLabel": "US Initial Jobless Claims",
+    "consensusMatchedEvents": 1077,
+    "consensusForecastEvents": 874,
+    "consensusFirstForecastObservation": "2009-05-30",
+    "consensusLastForecastObservation": "2026-04-18"
   },
   {
     "id": "JTSJOL",
@@ -249,7 +337,15 @@
     "approximateReleaseDateEvents": 115,
     "firstEvent": "2000-12-01T15:00:00.000Z",
     "lastEvent": "2026-03-31T14:00:00.000Z",
-    "sourceUrl": "https://fred.stlouisfed.org/series/JTSJOL"
+    "sourceUrl": "https://fred.stlouisfed.org/series/JTSJOL",
+    "consensusSourceId": "investing-economic-calendar",
+    "consensusSourceLabel": "Investing.com Economic Calendar",
+    "consensusEventId": 1057,
+    "consensusEventLabel": "US JOLTS Job Openings",
+    "consensusMatchedEvents": 267,
+    "consensusForecastEvents": 150,
+    "consensusFirstForecastObservation": "2013-06-01",
+    "consensusLastForecastObservation": "2026-02-01"
   },
   {
     "id": "GDP",
@@ -270,7 +366,15 @@
     "approximateReleaseDateEvents": 178,
     "firstEvent": "1947-04-01T13:30:00.000Z",
     "lastEvent": "2026-02-20T13:30:00.000Z",
-    "sourceUrl": "https://fred.stlouisfed.org/series/GDP"
+    "sourceUrl": "https://fred.stlouisfed.org/series/GDP",
+    "consensusSourceId": null,
+    "consensusSourceLabel": null,
+    "consensusEventId": null,
+    "consensusEventLabel": null,
+    "consensusMatchedEvents": 0,
+    "consensusForecastEvents": 0,
+    "consensusFirstForecastObservation": null,
+    "consensusLastForecastObservation": null
   },
   {
     "id": "GDPC1",
@@ -291,7 +395,15 @@
     "approximateReleaseDateEvents": 178,
     "firstEvent": "1947-04-01T13:30:00.000Z",
     "lastEvent": "2026-02-20T13:30:00.000Z",
-    "sourceUrl": "https://fred.stlouisfed.org/series/GDPC1"
+    "sourceUrl": "https://fred.stlouisfed.org/series/GDPC1",
+    "consensusSourceId": "investing-economic-calendar",
+    "consensusSourceLabel": "Investing.com Economic Calendar",
+    "consensusEventId": 375,
+    "consensusEventLabel": "US Real GDP QoQ Annualized",
+    "consensusMatchedEvents": 72,
+    "consensusForecastEvents": 72,
+    "consensusFirstForecastObservation": "2008-01-01",
+    "consensusLastForecastObservation": "2025-10-01"
   },
   {
     "id": "RSAFS",
@@ -312,6 +424,14 @@
     "approximateReleaseDateEvents": 112,
     "firstEvent": "1992-02-01T13:30:00.000Z",
     "lastEvent": "2026-04-21T12:30:00.000Z",
-    "sourceUrl": "https://fred.stlouisfed.org/series/RSAFS"
+    "sourceUrl": "https://fred.stlouisfed.org/series/RSAFS",
+    "consensusSourceId": "investing-economic-calendar",
+    "consensusSourceLabel": "Investing.com Economic Calendar",
+    "consensusEventId": 256,
+    "consensusEventLabel": "US Retail Sales MoM",
+    "consensusMatchedEvents": 329,
+    "consensusForecastEvents": 218,
+    "consensusFirstForecastObservation": "2008-01-01",
+    "consensusLastForecastObservation": "2026-03-01"
   }
 ]

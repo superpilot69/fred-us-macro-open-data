@@ -4,12 +4,16 @@ Core U.S. macro history and replay-ready market event data sourced from FRED.
 
 This repository now publishes the high-impact P1 macro dataset used for market replay. The older broad dataset whose event coverage effectively started in 2019 has been removed and replaced with full available history for the selected core releases.
 
+This refresh also adds consensus actual / forecast / previous values matched from Investing.com Economic Calendar history where coverage is available.
+
 ## What's inside
 
 - `data/fred-us-macro-history.json`
   - raw historical FRED observations for the included series
 - `data/fred-us-macro-events.json`
-  - replay-ready macro event records derived from the same series
+  - replay-ready macro event records derived from the same series, now enriched with `metadata.consensus` when matched consensus history exists
+- `data/investing-us-macro-consensus.json`
+  - raw Investing.com Economic Calendar occurrence snapshot used for the consensus enrichment
 - `metadata/series-catalog.json`
   - series metadata, transformed event value type, event counts, coverage, and source URLs
 - `metadata/dataset-metadata.json`
@@ -29,6 +33,9 @@ Latest refresh in this repository:
 - newest event: 2026-04-23T12:30:00.000Z
 - 5,752 events with FRED vintage release dates
 - 6,234 older events with approximate release dates
+- 4,682 events enriched with Investing.com consensus actual / previous values
+- 2,728 events with explicit consensus forecast values
+- 14 of 15 shipped series have some forecast coverage; `GDP` currently has no matched forecast series
 
 ## Included core series
 
@@ -54,7 +61,39 @@ Latest refresh in this repository:
 
 ## Actual vs expected values
 
-FRED provides observations and vintage/release metadata for these series, but it does not provide consensus forecast or expected-value fields. Event records therefore include actual values, previous values, changes, percentage changes, raw FRED observations, and release-date metadata. Forecast surprises can be added later only from a separate licensed or self-maintained expectations source.
+FRED provides observations and vintage/release metadata for these series, but it does not provide consensus forecast or expected-value fields. This dataset keeps FRED as the source of record for observations and release timing, then enriches matching event records with consensus values from Investing.com Economic Calendar history.
+
+When available, event records include:
+
+- `metadata.consensus.actual`
+- `metadata.consensus.forecast`
+- `metadata.consensus.previous`
+- `metadata.consensus.previousRevisedFrom`
+- `metadata.consensus.surprise`
+- `metadata.consensus.sourceId = investing-economic-calendar`
+- `metadata.consensus.sourceUrl`
+
+Coverage is partial and varies by series and year. Missing forecasts are stored as `null`, not `0`. Older rows may have actual / previous values but no forecast.
+
+### Consensus forecast coverage
+
+| FRED ID | Release | Consensus-matched events | Events with forecast | First forecast observation | Latest forecast observation |
+| --- | --- | ---: | ---: | --- | --- |
+| `DFEDTARU` | Fed funds target upper limit | 32 | 30 | 2008-12-16 | 2025-12-11 |
+| `CPIAUCNS` | Headline CPI YoY | 258 | 167 | 2012-04-01 | 2026-03-01 |
+| `CPILFENS` | Core CPI YoY | 578 | 167 | 2012-04-01 | 2026-03-01 |
+| `PPIACO` | PPI YoY | 168 | 168 | 2012-04-01 | 2026-03-01 |
+| `PCEPI` | PCE Price Index YoY | 80 | 39 | 2019-10-01 | 2026-02-01 |
+| `PCEPILFE` | Core PCE Price Index YoY | 580 | 129 | 2014-10-01 | 2026-02-01 |
+| `UNRATE` | Unemployment Rate | 307 | 212 | 2008-07-01 | 2026-03-01 |
+| `PAYEMS` | Nonfarm Payrolls | 627 | 218 | 2008-02-01 | 2026-03-01 |
+| `ADPMNUSNERSA` | ADP Employment Change | 98 | 98 | 2010-04-01 | 2026-03-01 |
+| `CES0500000003` | Avg Hourly Earnings MoM | 209 | 186 | 2008-05-01 | 2026-03-01 |
+| `ICSA` | Initial Jobless Claims | 1,077 | 874 | 2009-05-30 | 2026-04-18 |
+| `JTSJOL` | JOLTS Job Openings | 267 | 150 | 2013-06-01 | 2026-02-01 |
+| `GDP` | Nominal GDP QoQ annualized | 0 | 0 | - | - |
+| `GDPC1` | Real GDP QoQ annualized | 72 | 72 | 2008-01-01 | 2025-10-01 |
+| `RSAFS` | Retail Sales MoM | 329 | 218 | 2008-01-01 | 2026-03-01 |
 
 ## Data format
 
@@ -112,6 +151,16 @@ FRED provides observations and vintage/release metadata for these series, but it
     - `previousValue`
     - `change`
     - `pctChange`
+    - `consensus`
+      - `actual`
+      - `forecast`
+      - `previous`
+      - `previousRevisedFrom`
+      - `surprise`
+      - `surprisePct`
+      - `sourceId`
+      - `sourceLabel`
+      - `sourceUrl`
 
 For transformed event series, `metadata.value` is the market-facing actual value used in replay. For example, CPI/PCE/PPI events use year-over-year percent, payroll events use period change, GDP events use annualized quarter-over-quarter percent, and `metadata.rawValue` preserves the original FRED observation.
 
